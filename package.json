@@ -1,5 +1,5 @@
 {
-  "name": "Firebase Chat",
+  "name": "firebase-chat",
   "version": "1.0.0",
   "description": "Chat app made with react and firebase",
   "main": "index.js",
