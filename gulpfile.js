@@ -26,8 +26,6 @@ gulp.task('browser-sync', function () {
       'app/**/*.html',
       'app/src/css/**/*.css',
       'app/src/img/**/*',
-      'app/src/js/**/*.js',
-      'app/src/jsx/**/*.jsx'
    ];
 
    browserSync.init(files, {
@@ -138,8 +136,6 @@ gulp.task('html', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['app/**/*.html'], ['html']);
-  gulp.watch('app/src/js/*.js', ['scripts']);
-  gulp.watch('app/src/jsx/*.jsx', ['jsx']);
   gulp.watch('app/src/css/*.css', ['css']);
   gulp.watch('app/src/styl/*.styl', ['stylus']);
   //gulp.watch('app/src/fonts/**/*', ['fonts']);
