@@ -29,6 +29,8 @@ var App = React.createClass({
 	},
 
 	render: function(){
+		// this.state.items - only read data, just for display on screen
+		// this.firebaseRefs.items - object from firebase, used to insert or alter data
 		return (
 			<div className="demo-card-event mdl-card mdl-shadow--4dp">
 				<DisplayMsg items={this.state.items} loaded={this.state.loaded} />
