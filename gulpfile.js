@@ -147,4 +147,4 @@ gulp.task('deploy-pages', function () {
 		.pipe(deploy());
 });
 
-gulp.task('default', ['html', 'stylus', 'fonts', 'watch', 'imagemin', 'react', 'scripts', 'css', 'browser-sync']);
+gulp.task('default', ['html', 'stylus', 'fonts', 'watch', 'react', 'scripts', 'css', 'browser-sync']);
