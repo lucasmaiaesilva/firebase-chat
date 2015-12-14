@@ -8,21 +8,30 @@ var	rootUrl		= 'https://incandescent-fire-2082.firebaseio.com/';
 
 var App = React.createClass({
 	getInitialState: function(){
-		return { items: {} };
+		return {
+			items: {},
+			loaded: false
+		};
 	},
 
 	mixins: [ ReactFire ], // import the functions inside of react component
 
 	componentWillMount: function(){
-		this.bindAsObject(new Firebase(rootUrl + 'items/'), 'items');
+		var fb = new Firebase(rootUrl + 'items/');
+		this.bindAsObject(fb, 'items');
 		// bindAsObject is a method to create an object 
 		// with the data passed to reference
+		fb.on('value', this.handleDataLoaded);
+	},
+
+	handleDataLoaded: function(){
+		this.setState({loaded: true});
 	},
 
 	render: function(){
 		return (
 			<div className="demo-card-event mdl-card mdl-shadow--2dp">
-				<DisplayMsg items={this.state.items} />
+				<DisplayMsg items={this.state.items} loaded={this.state.loaded} />
 				<FormInput itemsStore={this.firebaseRefs.items} />
 			</div>
 		);

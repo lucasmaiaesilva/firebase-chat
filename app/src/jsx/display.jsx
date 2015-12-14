@@ -21,7 +21,7 @@ module.exports = React.createClass({
 
 	render: function(){
 		return ( 
-			<div className="text mdl-card--expand">
+			<div className={"text mdl-card--expand content " + (this.props.loaded ? 'loaded': '')}>
 				{this.renderList()}
 			</div>
 		);
