@@ -30,7 +30,7 @@ var App = React.createClass({
 
 	render: function(){
 		return (
-			<div className="demo-card-event mdl-card mdl-shadow--2dp">
+			<div className="demo-card-event mdl-card mdl-shadow--4dp">
 				<DisplayMsg items={this.state.items} loaded={this.state.loaded} />
 				<FormInput itemsStore={this.firebaseRefs.items} />
 			</div>
