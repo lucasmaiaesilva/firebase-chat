@@ -138,7 +138,7 @@ gulp.task('watch', function () {
   gulp.watch(['app/**/*.html'], ['html']);
   gulp.watch('app/src/css/*.css', ['css']);
   gulp.watch('app/src/styl/*.styl', ['stylus']);
-  //gulp.watch('app/src/fonts/**/*', ['fonts']);
+  gulp.watch('app/src/fonts/**/*', ['fonts']);
 });
 
 // just run gulp deploy-pages to send build files to gh-pages
