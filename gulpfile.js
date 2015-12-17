@@ -13,11 +13,11 @@ var gulp 		= require('gulp'),
 	imagemin   	= require('gulp-imagemin'),
 	concatCss 	= require('gulp-concat-css'),
 	deploy		= require('gulp-gh-pages'),
-	gutil		= require('gulp-util'), // mostrar mensagens de log no console sobre o processo de build
-	source		= require('vinyl-source-stream'), // gerenciar o source stream
-	browserify	= require('browserify'), // responsável por definir qual parte do código pertence a qual parte via require
-	watchify	= require('watchify'), // recompila o código assim que alguma mudança é detectada
-	reactify	= require('reactify'), // transform jsx files in js
+	gutil		= require('gulp-util'),
+	source		= require('vinyl-source-stream'),
+	browserify	= require('browserify'),
+	watchify	= require('watchify'),
+	reactify	= require('reactify'),
 	notifier	= require('node-notifier');
 
 
