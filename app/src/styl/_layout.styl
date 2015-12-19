@@ -38,10 +38,16 @@ h1
 .text
 	color #555
 	padding 10px
+	+below(bp)
+		padding 20px
 	p
 		margin-bottom 3px
 		.user
 			color #aaa
+		+below(bp)
+			font-size 1.4em
+			margin 25px 0
+		
 .content
 	opacity 0
 	transition opacity 1s ease-in
@@ -83,3 +89,9 @@ form
 	width 100%
 	.mdl-textfield
 		width 100%
+	.mdl-textfield__input
+		+below(bp)
+			font-size 2em
+	.mdl-textfield__label
+		+below(bp)
+			font-size 1em
