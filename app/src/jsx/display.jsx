@@ -12,12 +12,9 @@ module.exports = React.createClass({
 				var valueText = String(this.props.items[key].text);
 				var text = "";
 
-				if (valueText.indexOf("http:") == 0 || valueText.indexOf("https:") == 0)
-				{
+				if (valueText.indexOf("http:") === 0 || valueText.indexOf("https:") === 0) {
 					text = <a href={valueText} target="_blank"> {valueText} </a>;
-				}
-				else
-				{
+				} else {
 					text = this.props.items[key].text;
 				}
 
