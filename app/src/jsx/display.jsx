@@ -8,10 +8,23 @@ module.exports = React.createClass({
 		} 
 		else {
 			for(var key in this.props.items){
+				
+				var valueText = String(this.props.items[key].text);
+				var text = "";
+
+				if (valueText.indexOf("http:") == 0 || valueText.indexOf("https:") == 0)
+				{
+					text = <a href={valueText} target="_blank"> {valueText} </a>;
+				}
+				else
+				{
+					text = this.props.items[key].text;
+				}
+
 				msgs.push(
 					<p>
 						<span className="user">{this.props.items[key].user} diz: </span>
-						{this.props.items[key].text}
+						{text}
 					</p>
 				);
 			}
