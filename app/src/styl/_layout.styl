@@ -9,6 +9,9 @@ html
 body
 	display flex
 	height 100vh
+	+below(bp)
+		flex-direction column
+		
 	
 aside.barra-lateral
 	background gray
@@ -16,14 +19,19 @@ aside.barra-lateral
 	display flex
 	justify-content center
 	align-items center
+	+below(bp)
+		width auto
 	
 	
 section.conteudo
-	background PeachPuff
+	background Peachpuff
+	//background url('../img/vector-bg.jpg') no-repeat center center
+	bg-cover
 	flex-grow 1
 	display flex
 	flex-direction column
 	min-height 100vh
+
 	
 	.display
 		margin-top 20px
@@ -64,6 +72,8 @@ section.conteudo
 	padding 14px
 	margin 15px 0
 	border-radius 5px
+	color #555
+	line-height 1.3rem
 	
 .me
 	align-self flex-start
