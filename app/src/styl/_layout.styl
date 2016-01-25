@@ -25,12 +25,13 @@ aside.barra-lateral
 	
 section.conteudo
 	background Peachpuff
-	//background url('../img/vector-bg.jpg') no-repeat center center
 	bg-cover
 	flex-grow 1
 	display flex
 	flex-direction column
 	min-height 100vh
+	+below(bp)
+		min-height calc(100vh - 100px)
 
 	
 	.display
@@ -55,16 +56,20 @@ section.conteudo
 	justify-content space-around
 	
 .icon
-	width 40px
+	//width 8%
 	font-size 24px
 	img
-		max-width 80%
+		height 38px
 
 .input
-	width 90%
+	flex-grow 1
+	margin 0 20px
 	input 
 		width 96%
 		padding 8px 2%
+		border-spacing 0
+		&:focus
+			outline none
 		
 .msg
 	background white
@@ -72,7 +77,7 @@ section.conteudo
 	padding 14px
 	margin 15px 0
 	border-radius 5px
-	color #555
+	color #5a5a5a
 	line-height 1.3rem
 	
 .me
