@@ -9,6 +9,7 @@ html
 body
 	display flex
 	height 100vh
+	font-family 'Roboto' sans-serif
 	+below(bp)
 		flex-direction column
 		
@@ -56,8 +57,6 @@ section.conteudo
 	justify-content space-around
 	
 .icon
-	//width 8%
-	font-size 24px
 	img
 		height 38px
 
@@ -65,14 +64,15 @@ section.conteudo
 	flex-grow 1
 	margin 0 20px
 	input 
+		border-radius 5px
 		width 96%
-		padding 8px 2%
+		padding 12px 2%
+		border none
 		border-spacing 0
 		&:focus
 			outline none
 		
 .msg
-	background white
 	max-width 74%
 	padding 14px
 	margin 15px 0
@@ -81,6 +81,8 @@ section.conteudo
 	line-height 1.3rem
 	
 .me
-	align-self flex-start
-.not-me
 	align-self flex-end
+	background #dcf8c6
+.not-me
+	background #fff
+	align-self flex-start
