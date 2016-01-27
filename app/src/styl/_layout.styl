@@ -12,6 +12,7 @@ body
 	font-family 'Roboto' sans-serif
 	+below(bp)
 		flex-direction column
+		font-size 16px
 		
 	
 aside.barra-lateral
@@ -71,6 +72,8 @@ section.conteudo
 		border-spacing 0
 		&:focus
 			outline none
+		+below(bp)
+			font-size 2.2em
 		
 .msg
 	max-width 74%
