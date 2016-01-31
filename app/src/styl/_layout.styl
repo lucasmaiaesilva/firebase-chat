@@ -50,8 +50,7 @@ section.conteudo
 		
 	.insert
 		background #f3f0ef
-		width 74%
-		padding 3px
+		width 100%
 		display flex
 		position fixed
 		bottom 0
@@ -66,23 +65,26 @@ section.conteudo
 	flex-grow 1
 	
 .icon
+	flex auto auto 14%
 	svg
 		height 38px
 		width auto
 		fill #4a4a4a
 		
 		+below(bp)
-			height 94px
-			margin-right 20px
+			height 70px
+			//margin-right 20px
 		
 
 .input
-	flex-grow 1
-	margin 0 20px
+	//margin 0 1%
+	margin 0
+	flex auto auto 86%
 	input 
 		border-radius 5px
-		width 96%
-		padding 12px 2%
+		width 98%
+		//padding 12px 1%
+		padding 12px 0
 		border none
 		border-spacing 0
 		&:focus
