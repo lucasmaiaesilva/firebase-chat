@@ -7,9 +7,11 @@ html
 		color #fff
 		
 body
+	position relative
 	display flex
 	height 100vh
 	font-family 'Roboto' sans-serif
+	font-size 16px
 	+below(bp)
 		flex-direction column
 		font-size 16px
@@ -26,39 +28,42 @@ aside.barra-lateral
 	
 	
 section.conteudo
-	background Peachpuff
-	bg-cover
 	flex-grow 1
 	display flex
-	overflow-y scroll
 	flex-direction column
 	min-height 100vh
 	+below(bp)
-		min-height calc(100vh - 100px)
+		min-height 100vh
 
 	
 	.display
-		margin-top 20px
-		margin-left 20px
-		margin-right 20px
+		background Peachpuff
+		padding-top 20px
+		padding-left 20px
+		padding-right 20px
+		padding-bottom 70px
 		display flex
 		flex-direction column
 		flex-grow 1
+		+below(bp)
+			padding-bottom 120px
 		
 	.insert
 		background #f3f0ef
-		padding 7px 20px
+		width 74%
+		padding 3px
 		display flex
+		position fixed
+		bottom 0
 		color #333
-		height 60px
 		align-items center
 		+below(bp)
-			padding 50px 0
+			padding .8rem 0
+			width 100%
 		
 .info
 	display flex
 	flex-grow 1
-	justify-content space-around
 	
 .icon
 	svg
@@ -67,7 +72,7 @@ section.conteudo
 		fill #4a4a4a
 		
 		+below(bp)
-			height 124px
+			height 94px
 			margin-right 20px
 		
 
@@ -83,17 +88,21 @@ section.conteudo
 		&:focus
 			outline none
 		+below(bp)
-			font-size 2.8em
+			font-size 2rem
 			padding 4% 2%
 			
 		
 .msg
 	max-width 74%
-	padding 14px
+	display block
 	margin 15px 0
 	border-radius 5px
 	color #5a5a5a
+	padding .7rem
 	line-height 1.3rem
+	+below(bp)
+		padding 1.4rem
+		line-height 1.5rem
 	
 .me
 	align-self flex-end
