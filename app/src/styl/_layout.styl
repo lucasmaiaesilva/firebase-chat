@@ -28,6 +28,7 @@ aside.barra-lateral
 	
 	
 section.conteudo
+	position relative
 	flex-grow 1
 	display flex
 	flex-direction column
@@ -56,6 +57,7 @@ section.conteudo
 		bottom 0
 		color #333
 		align-items center
+		 justify-content space-around
 		+below(bp)
 			padding .8rem 0
 			width 100%
@@ -65,26 +67,26 @@ section.conteudo
 	flex-grow 1
 	
 .icon
-	flex auto auto 14%
+	flex 0 0 10%
 	svg
-		height 38px
+		height 52px
 		width auto
 		fill #4a4a4a
 		
 		+below(bp)
-			height 70px
-			//margin-right 20px
+			height 100px
 		
 
 .input
-	//margin 0 1%
-	margin 0
-	flex auto auto 86%
+	margin 5px 1%
+	width 70%
+	+below(bp)
+		width 84%
+		margin-right 2%
 	input 
 		border-radius 5px
 		width 98%
-		//padding 12px 1%
-		padding 12px 0
+		padding 12px 1%
 		border none
 		border-spacing 0
 		&:focus
