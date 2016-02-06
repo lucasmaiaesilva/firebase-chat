@@ -15,17 +15,31 @@ body
 	+below(bp)
 		flex-direction column
 		font-size 16px
-		
+	
 	
 aside.barra-lateral
-	background gray
+	background url("../img/sidebar-bg.jpg") no-repeat center center
+	background-size cover
 	width 34%
 	display flex
 	justify-content center
 	align-items center
 	+below(bp)
 		width auto
-	
+
+	.card
+		display flex
+		border-left 1px solid #ff3366
+		width 70%
+		height 50px
+		align-items center
+		justify-content center
+		background rgba(256,256,256,.1)
+		span
+			color #fff
+			font-weight 100
+		
+			
 	
 section.conteudo
 	overflow-y scroll
@@ -58,7 +72,7 @@ section.conteudo
 		bottom 0
 		color #333
 		align-items center
-		 justify-content space-around
+		justify-content space-around
 		+below(bp)
 			padding .8rem 0
 			width 100%
