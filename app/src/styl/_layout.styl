@@ -18,16 +18,29 @@ body
 	
 	
 aside.barra-lateral
-	background url("../img/sidebar-bg.jpg") no-repeat center center
-	background-size cover
-	width 34%
+	//background url("../img/sidebar-bg.jpg") no-repeat center center
+	//background-size cover
+	background #263238
+	width 38%
 	display flex
 	justify-content center
 	align-items center
+	flex-direction column
 	+below(bp)
 		width auto
-
-	.card
+		padding 10px 0
+		flex-direction row
+		justify-content space-around
+		
+	p.coursive
+		font-family 'Courgette', cursive
+		font-size 1.2em
+		color #fff
+		font-weight 100
+		+below(bp)
+			font-size 1.7em
+	
+	a.card
 		display flex
 		border-left 1px solid #ff3366
 		width 70%
@@ -35,6 +48,14 @@ aside.barra-lateral
 		align-items center
 		justify-content center
 		background rgba(256,256,256,.1)
+		text-decoration none
+		+below(bp)
+			width auto
+			padding 14px 4%
+			font-size 2em
+		&:hover
+			cursor pointer
+		
 		span
 			color #fff
 			font-weight 100
@@ -53,7 +74,8 @@ section.conteudo
 
 	
 	.display
-		background Peachpuff
+		background url("../img/vector-bg.jpg") no-repeat center center fixed
+		background-size cover
 		padding-top 20px
 		padding-left 20px
 		padding-right 20px
