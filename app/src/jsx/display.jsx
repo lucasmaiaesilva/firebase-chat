@@ -10,19 +10,21 @@ module.exports = React.createClass({
 			for(var key in this.props.items){
 				
 				var valueText = String(this.props.items[key].text);
+				var valueClasse = String(this.props.items[key].classe);
 				var text = "";
+				var classe = "";
 
 				if (valueText.indexOf("http:") === 0 || valueText.indexOf("https:") === 0) {
 					text = <a href={valueText} target="_blank"> {valueText} </a>;
 				} else {
 					text = this.props.items[key].text;
+					classe = this.props.items[key].classe;
 				}
 
 				msgs.push(
-					<p>
-						<span className="user">{this.props.items[key].user} diz: </span>
+					<div key={key} className={classe}>
 						{text}
-					</p>
+					</div>
 				);
 			}
 			return msgs;
@@ -31,7 +33,7 @@ module.exports = React.createClass({
 
 	render: function(){
 		return ( 
-			<div className={"text mdl-card--expand content " + (this.props.loaded ? 'loaded': '')}>
+			<div className="display">
 				{this.renderList()}
 			</div>
 		);

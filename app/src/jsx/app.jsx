@@ -32,9 +32,17 @@ var App = React.createClass({
 		// this.state.items - only read data, just for display on screen
 		// this.firebaseRefs.items - object from firebase, used to insert or alter data
 		return (
-			<div className="demo-card-event mdl-card mdl-shadow--4dp">
-				<DisplayMsg items={this.state.items} loaded={this.state.loaded} />
-				<FormInput itemsStore={this.firebaseRefs.items} />
+			<div className="site">
+				<aside className="barra-lateral">
+					<a href="https://github.com/lucasmaiaesilva/firebase-chat" className="card">
+						<span>Fork me on Github</span>
+					</a>
+					<p className="coursive">or Leave me a message</p>
+				</aside>
+				<section className="conteudo">
+					<DisplayMsg items={this.state.items} loaded={this.state.loaded} />
+					<FormInput itemsStore={this.firebaseRefs.items} />
+				</section>
 			</div>
 		);
 	}
