@@ -3,7 +3,8 @@ var React = require('react');
 module.exports = React.createClass({
 	getInitialState: function(){
 		return {
-			text: ""
+			text: "",
+			classe: ""
 		}
 	},
 
@@ -11,10 +12,13 @@ module.exports = React.createClass({
 		e.preventDefault();
 		this.props.itemsStore.push({
 			text: this.state.text,
-			classe: 'not me'
+			classe: "msg not-me"
 		});
 		console.log(this.props.itemsStore);
-		this.setState({text: ""});
+		this.setState({
+			text: "",
+			classe: ""
+		});
 	},
 
 	handleInputChange: function(e){

@@ -18,19 +18,18 @@ html
 	
 	
 aside.barra-lateral
-	//background url("../img/sidebar-bg.jpg") no-repeat center center
-	//background-size cover
 	background #263238
-	width 20%
+	width 22%
 	display flex
 	justify-content center
 	align-items center
 	flex-direction column
 	+below(bp)
-		width auto
+		display none
+		/*width auto
 		padding 10px 0
 		flex-direction row
-		justify-content space-around
+		justify-content space-around*/
 		
 	p.coursive
 		font-family 'Courgette', cursive
@@ -145,9 +144,9 @@ section.conteudo
 		padding 1.4rem
 		line-height 1.5rem
 	
-.me
+.not-me
 	align-self flex-end
 	background #dcf8c6
-.not-me
+.me
 	background #fff
 	align-self flex-start
