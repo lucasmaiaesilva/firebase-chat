@@ -34,6 +34,7 @@ var App = React.createClass({
 		return (
 			<div className="site">
 				<aside className="barra-lateral">
+					<img src="img/me.jpg" />
 					<a href="https://github.com/lucasmaiaesilva/firebase-chat" className="card">
 						<span>Fork me on Github</span>
 					</a>
